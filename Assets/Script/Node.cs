@@ -10,17 +10,20 @@ public class Node : IHeapItem<Node> // Node need to implement IHeapItem interfac
     public Vector3 WorldPosition;
 
     public int gridX, gridY; // position in the grid (start from Left-Bottom), Not world position
+    public int movementPenalty;
+
     public int gCost;
     public int hCost;
     public Node parent;
     int heapIndex;
 
-    public Node(bool _walkable, Vector3 _WorldPosition, int _gridX, int _gridY)
+    public Node(bool _walkable, Vector3 _WorldPosition, int _gridX, int _gridY, int _penalty)
     {
-        walkable      = _walkable;
-        WorldPosition = _WorldPosition;
-        gridX         = _gridX;
-        gridY         = _gridY;
+        walkable        = _walkable;
+        WorldPosition   = _WorldPosition;
+        gridX           = _gridX;
+        gridY           = _gridY;
+        movementPenalty = _penalty;
     }
 
     public int fCost {
