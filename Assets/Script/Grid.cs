@@ -77,7 +77,7 @@ public class Grid : MonoBehaviour
                 grid[x,y] = new Node(walkable, worldPoint, x, y, movementPenalty);
             }
         }
-        BlurPenaltyMap(10);
+        BlurPenaltyMap(5);
     }
 
     void BlurPenaltyMap(int blurSize) { // not study in detail yet // copied 
